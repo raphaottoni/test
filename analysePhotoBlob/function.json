@@ -1,0 +1,21 @@
+{
+  "bindings": [
+    {
+      "name": "triggerBlob",
+      "type": "blobTrigger",
+      "direction": "in",
+      "path": "photos/{name}",
+      "connection": "AzureWebJobsStorage"
+    },
+    {
+      "type": "sendGrid",
+      "name": "email",
+      "apiKey": "SENDGRID_API_KEY",
+      "to": "changeme@gmail.com",
+      "from": "changeme@gmail.com",
+      "subject": "Azure Functions & Computer Vision Results",
+      "direction": "out"
+    }
+  ],
+  "disabled": false
+}
